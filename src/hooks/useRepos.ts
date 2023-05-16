@@ -3,7 +3,7 @@ import { Repository } from './types';
 import api from '../api/github';
 
 async function fetchRepos() {
-    const {data} = await api.get<Repository[]>('/users/CesarAFC');
+    const {data} = await api.get<Repository[]>('/users/CesarAFC/repos');
     return data;
 }
 

@@ -1,4 +1,6 @@
+import Card from "./components/Card";
 import { useFetchRepositories } from "./hooks/useRepos";
+
 
 function App() {
 
@@ -8,11 +10,11 @@ function App() {
 
   return (
     <div>
-      {repos?.map(repo => (
-        <div><h1>Repo</h1></div>
+      {repos?.map((repository) => (
+          <Card repository={repository}/>
       ))}
     </div>
-  )
+  );
 }
 
 export default App
